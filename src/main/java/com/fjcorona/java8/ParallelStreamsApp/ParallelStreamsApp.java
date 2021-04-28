@@ -1,9 +1,9 @@
-package com.fjcorona.java8.StreamsParalelos;
+package com.fjcorona.java8.ParallelStreamsApp;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StreamsParalelos {
+public class ParallelStreamsApp {
 
     private List<Integer> numeros;
 
@@ -24,7 +24,7 @@ public class StreamsParalelos {
     }
 
     public static void main (String[] args) {
-        StreamsParalelos app = new StreamsParalelos();
+        ParallelStreamsApp app = new ParallelStreamsApp();
 
         app.llenar();
         app.probarStream();
