@@ -4,45 +4,45 @@ import java.util.*;
 
 public class MyCollections {
 
-    private List<String> lista;
+    private List<String> list;
 
-    public void llenaLista() {
-        lista = new ArrayList<>();
+    public void fillUpList() {
+        list = new ArrayList<>();
 
-        lista.add("JavoCrown");
-        lista.add("Javo");
-        lista.add("Crown");
+        list.add("JavoCrown");
+        list.add("Javo");
+        list.add("Crown");
     }
 
-    public void usaForEach() {
+    public void useForEach() {
         // Con un ciclo for común y corriente
 
         /*
-        for (String element : lista) {
+        for (String element : list) {
             System.out.println(element);
         }
         */
 
         // Con una expresión lambda
-        // lista.forEach( x -> System.out.println(x) );
+        // list.forEach( x -> System.out.println(x) );
 
         // Con referencia a método
-        lista.forEach(System.out::println);
+        list.forEach(System.out::println);
     }
 
     public void usaRemoveIf() {
         // Con un ciclo for. Retorna una excepción
         /*
-        for (String element : lista) {
+        for (String element : list) {
             if (element.equalsIgnoreCase("Crown")) {
-                lista.remove(element);
+                list.remove(element);
             }
         }
         */
 
         // Con un iterator
         /*
-        Iterator<String> it = lista.iterator();
+        Iterator<String> it = list.iterator();
         while (it.hasNext()) {
             if(it.next().equalsIgnoreCase("Crown")) {
                 it.remove();
@@ -51,10 +51,10 @@ public class MyCollections {
         */
 
         // Con una expresión lambda
-        lista.removeIf(x -> x.equalsIgnoreCase("Crown"));
+        list.removeIf(x -> x.equalsIgnoreCase("Crown"));
     }
 
-    public void usaSort() {
+    public void useSort() {
 
 
         // -------- CON ḾETODO SORT DE COLLECTIONS
@@ -62,7 +62,7 @@ public class MyCollections {
 
         // Clase anónima
         /*
-        Collections.sort(lista, new Comparator<String>() {
+        Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.compareToIgnoreCase(o2);
@@ -71,10 +71,10 @@ public class MyCollections {
         */
 
         // Expresión lambda
-        // Collections.sort(lista, (x, y) -> x.compareToIgnoreCase(y));
+        // Collections.sort(list, (x, y) -> x.compareToIgnoreCase(y));
 
         // Referencia a método
-        // Collections.sort(lista, String::compareToIgnoreCase);
+        // Collections.sort(list, String::compareToIgnoreCase);
 
 
         // -------- CON ḾETODO SORT PROPIO DE LA LISTA
@@ -82,7 +82,7 @@ public class MyCollections {
 
         // Clase anónima
         /*
-        lista.sort(new Comparator<String>() {
+        list.sort(new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.compareToIgnoreCase(o2);
@@ -91,23 +91,23 @@ public class MyCollections {
         */
 
         // Expresión lambda
-        // lista.sort( (x, y) -> x.compareToIgnoreCase(y) );
+        // list.sort( (x, y) -> x.compareToIgnoreCase(y) );
 
         // Referencia a método
-        lista.sort(String::compareToIgnoreCase);
+        list.sort(String::compareToIgnoreCase);
     }
 
     public static void main (String[] args) {
         MyCollections app = new MyCollections();
 
-        app.llenaLista();
-        app.usaForEach();
+        app.fillUpList();
+        app.useForEach();
 
-        app.usaSort();
-        app.usaForEach();
+        app.useSort();
+        app.useForEach();
 
         app.usaRemoveIf();
-        app.usaForEach();
+        app.useForEach();
     }
 
 }
