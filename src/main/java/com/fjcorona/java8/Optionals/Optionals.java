@@ -4,7 +4,7 @@ import java.util.Optional;
 
 public class Optionals {
 
-    public void probar(String value) {
+    public void test(String value) {
         // Si el valor es null devuelve un NullPointerException
         // System.out.println(value.toLowerCase().contains("javo"));
 
@@ -37,8 +37,8 @@ public class Optionals {
         // Funciona parecido a orElseThrow
         // Pero en lugar de un valor por defecto retorna una excepción
         Optional<String> op = Optional.ofNullable(value);
-        String retorno = op.orElseThrow(NullPointerException::new);
-        System.out.println(retorno);
+        String myReturn = op.orElseThrow(NullPointerException::new);
+        System.out.println(myReturn);
     }
 
     public void isPresent(String value) {
@@ -52,9 +52,9 @@ public class Optionals {
     public static void main (String[] args) {
         Optionals app = new Optionals();
 
-        app.probar("JavoCrown");
-        app.probar("JavierCorona");
-        app.probar(null);
+        app.test("JavoCrown");
+        app.test("JavierCorona");
+        app.test(null);
 
         app.orElse("JavoCrown");
         app.orElse(null);
