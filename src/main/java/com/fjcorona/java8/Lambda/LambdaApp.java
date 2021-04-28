@@ -7,60 +7,60 @@ import java.util.List;
 
 public class LambdaApp {
 
-    public void ordenaJ7 () {
-        List<String> lista = new ArrayList<>();
-        lista.add("JavoCrown");
-        lista.add("Javo");
-        lista.add("Crown");
+    public void sortJ7 () {
+        List<String> list = new ArrayList<>();
+        list.add("JavoCrown");
+        list.add("Javo");
+        list.add("Crown");
 
-        Collections.sort(lista, new Comparator<String>() {
+        Collections.sort(list, new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
                 return o1.compareTo(o2);
             }
         });
 
-        for (String elemento : lista) {
-            System.out.println(elemento);
+        for (String element : list) {
+            System.out.println(element);
         }
     }
 
-    public void calculaJ7 () {
+    public void computeJ7 () {
         Operation operation = new Operation() {
             @Override
-            public double calculaPromedio(double n1, double n2) {
+            public double computeAverage(double n1, double n2) {
                 return (n1 + n2) / 2;
             }
         };
 
-        System.out.println(operation.calculaPromedio(2,3) );
+        System.out.println(operation.computeAverage(2,3) );
     }
 
-    public void calculaJ8() {
-        // Operacion operacion = (double x, double y) -> {return (x + y) / 2;};
-        // Operacion operacion = (double x, double y) -> (x + y) / 2;
+    public void computeJ8() {
+        // Operation operation = (double x, double y) -> {return (x + y) / 2;};
+        // Operation operation = (double x, double y) -> (x + y) / 2;
         Operation operation = (x, y) -> (x + y) / 2;
-        System.out.println(operation.calculaPromedio(3,5));
+        System.out.println(operation.computeAverage(3,5));
     }
 
-    public void ordenaJ8() {
-        List<String> lista = new ArrayList<>();
-        lista.add("JavoCrown");
-        lista.add("Javo");
-        lista.add("Crown");
+    public void sortJ8() {
+        List<String> list = new ArrayList<>();
+        list.add("JavoCrown");
+        list.add("Javo");
+        list.add("Crown");
 
-        // Collections.sort(lista, (String o1, String o2) -> o1.compareTo(o2) );
-        Collections.sort(lista, (o1, o2) -> o1.compareTo(o2) );
-        for (String elemento: lista) {
-            System.out.println(elemento);
+        // Collections.sort(list, (String o1, String o2) -> o1.compareTo(o2) );
+        Collections.sort(list, (o1, o2) -> o1.compareTo(o2) );
+        for (String element: list) {
+            System.out.println(element);
         }
     }
 
     public static void main( String[] args ) {
-        LambdaApp lambdaApp = new LambdaApp();
-        // lambdaApp.ordenaJ7();
-        lambdaApp.ordenaJ8();
-        // lambdaApp.calculaJ7();
-        lambdaApp.calculaJ8();
+        LambdaApp app = new LambdaApp();
+        // app.sortJ7();
+        app.sortJ8();
+        // app.computeJ7();
+        app.computeJ8();
     }
 }
