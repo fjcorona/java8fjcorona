@@ -4,6 +4,6 @@ import java.lang.FunctionalInterface;
 @FunctionalInterface
 public interface Operation {
 
-    public double calcula(double n1, double n2);
+    public double calculate(double n1, double n2);
 
 }
