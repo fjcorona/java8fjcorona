@@ -3,7 +3,7 @@ package com.fjcorona.java8.FunctionalInterface;
 public class FunctionalInterface {
 
     public double opera(double n1, double n2) {
-        Operacion operacion = (x, y) -> x + y;
+        Operation operacion = (x, y) -> x + y;
         return operacion.calcula(n1, n2);
     }
 
