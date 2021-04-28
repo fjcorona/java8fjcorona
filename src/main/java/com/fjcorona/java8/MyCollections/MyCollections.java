@@ -1,8 +1,8 @@
-package com.fjcorona.java8.Colecciones;
+package com.fjcorona.java8.MyCollections;
 
 import java.util.*;
 
-public class Colecciones {
+public class MyCollections {
 
     private List<String> lista;
 
@@ -98,7 +98,7 @@ public class Colecciones {
     }
 
     public static void main (String[] args) {
-        Colecciones app = new Colecciones();
+        MyCollections app = new MyCollections();
 
         app.llenaLista();
         app.usaForEach();
