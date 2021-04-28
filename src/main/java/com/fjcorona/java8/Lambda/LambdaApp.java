@@ -1,7 +1,5 @@
 package com.fjcorona.java8.Lambda;
 
-import org.omg.Messaging.SyncScopeHelper;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -28,21 +26,21 @@ public class LambdaApp {
     }
 
     public void calculaJ7 () {
-        Operacion operacion = new Operacion() {
+        Operation operation = new Operation() {
             @Override
             public double calculaPromedio(double n1, double n2) {
                 return (n1 + n2) / 2;
             }
         };
 
-        System.out.println(operacion.calculaPromedio(2,3) );
+        System.out.println(operation.calculaPromedio(2,3) );
     }
 
     public void calculaJ8() {
         // Operacion operacion = (double x, double y) -> {return (x + y) / 2;};
         // Operacion operacion = (double x, double y) -> (x + y) / 2;
-        Operacion operacion = (x, y) -> (x + y) / 2;
-        System.out.println(operacion.calculaPromedio(3,5));
+        Operation operation = (x, y) -> (x + y) / 2;
+        System.out.println(operation.calculaPromedio(3,5));
     }
 
     public void ordenaJ8() {
