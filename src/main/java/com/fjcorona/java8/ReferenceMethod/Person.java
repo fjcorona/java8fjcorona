@@ -1,14 +1,14 @@
 package com.fjcorona.java8.ReferenceMethod;
 
-public class Persona {
+public class Person {
 
     public int id;
     public String nombre;
 
-    public Persona() {
+    public Person() {
     }
 
-    public Persona(int id, String nombre) {
+    public Person(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
     }

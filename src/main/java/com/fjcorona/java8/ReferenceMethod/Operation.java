@@ -1,6 +1,6 @@
 package com.fjcorona.java8.ReferenceMethod;
 
 @FunctionalInterface
-public interface Operacion {
+public interface Operation {
     void saludar ();
 }

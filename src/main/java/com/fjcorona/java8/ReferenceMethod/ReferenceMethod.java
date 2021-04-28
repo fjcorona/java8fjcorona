@@ -2,14 +2,14 @@ package com.fjcorona.java8.ReferenceMethod;
 
 import java.util.Arrays;
 
-public class MetodoReferencia {
+public class ReferenceMethod {
 
     public static void referenciarMetodoStatic () {
         System.out.println("Referencia a método estático");
     }
 
     public void operar() {
-        Operacion opp = MetodoReferencia::referenciarMetodoStatic;
+        Operation opp = ReferenceMethod::referenciarMetodoStatic;
         opp.saludar();
     }
 
@@ -57,18 +57,18 @@ public class MetodoReferencia {
         // IPersona iper = (x, y) -> new Persona(x, y);
 
         // Con referencia al método constructor
-        IPersona iper = Persona::new;
+        IPerson iper = Person::new;
 
         System.out.println(iper.crear(1, "Javo").toString());
     }
 
     public static void main (String[] args) {
-        MetodoReferencia app = new MetodoReferencia();
+        ReferenceMethod app = new ReferenceMethod();
         app.operar();
         app.referenciarMetodooInstanciaObjetoArbitarrio();
 
         // Referenciar a metodo de la i9nstancia particular app
-        Operacion opp = app::referenciarMetodooInstanciaObjetoParticular;
+        Operation opp = app::referenciarMetodooInstanciaObjetoParticular;
         opp.saludar();
 
         app.referenciarConstructor();
