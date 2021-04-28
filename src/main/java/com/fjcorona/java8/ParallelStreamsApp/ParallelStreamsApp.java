@@ -5,29 +5,29 @@ import java.util.List;
 
 public class ParallelStreamsApp {
 
-    private List<Integer> numeros;
+    private List<Integer> numbers;
 
-    public void llenar() {
-        numeros = new ArrayList<>();
+    public void fillIn() {
+        numbers = new ArrayList<>();
 
         for (int idx = 1; idx <= 10; idx ++) {
-            numeros.add(idx);
+            numbers.add(idx);
         }
     }
 
-    public void probarStream() {
-        numeros.stream().forEach(System.out::println);
+    public void testStream() {
+        numbers.stream().forEach(System.out::println);
     }
 
-    public void probarStreamParalelo() {
-        numeros.parallelStream().forEach(System.out::println);
+    public void testParallelStream() {
+        numbers.parallelStream().forEach(System.out::println);
     }
 
     public static void main (String[] args) {
         ParallelStreamsApp app = new ParallelStreamsApp();
 
-        app.llenar();
-        app.probarStream();
-        app.probarStreamParalelo();
+        app.fillIn();
+        app.testStream();
+        app.testParallelStream();
     }
 }
