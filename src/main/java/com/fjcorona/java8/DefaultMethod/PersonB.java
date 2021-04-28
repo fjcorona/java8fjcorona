@@ -1,6 +1,6 @@
 package com.fjcorona.java8.DefaultMethod;
 
-public interface PersonaB {
+public interface PersonB {
 
     public void duerme();
 

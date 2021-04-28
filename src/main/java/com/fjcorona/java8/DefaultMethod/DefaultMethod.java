@@ -1,6 +1,6 @@
 package com.fjcorona.java8.DefaultMethod;
 
-public class DefaultMethod implements PersonaA, PersonaB {
+public class DefaultMethod implements PersonA, PersonB {
 
     @Override
     public void camina() {
@@ -22,7 +22,7 @@ public class DefaultMethod implements PersonaA, PersonaB {
          * Si no queremos usar ningún método podemos directamente sobreescribir
          * Su lógica.
          */
-        PersonaA.super.habla();
+        PersonA.super.habla();
         // PersonaB.super.habla();
     }
 

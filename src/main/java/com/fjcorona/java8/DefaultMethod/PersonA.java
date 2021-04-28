@@ -1,6 +1,6 @@
 package com.fjcorona.java8.DefaultMethod;
 
-public interface PersonaA {
+public interface PersonA {
     public void camina();
 
     default public void habla () {
