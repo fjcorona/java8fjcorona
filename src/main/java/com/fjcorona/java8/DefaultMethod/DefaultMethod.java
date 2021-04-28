@@ -3,17 +3,17 @@ package com.fjcorona.java8.DefaultMethod;
 public class DefaultMethod implements PersonA, PersonB {
 
     @Override
-    public void camina() {
+    public void walk() {
         System.out.println("Soy la PersonaA y estoy caminando.");
     }
 
     @Override
-    public void duerme() {
+    public void sleep() {
         System.out.println("PersonaB se encuentra dormida.");
     }
 
     @Override
-    public void habla() {
+    public void talk() {
         /*
          * Al tener dos interfaces implementadas con metodos default
          * Que se llaman exactamente igual
@@ -22,17 +22,17 @@ public class DefaultMethod implements PersonA, PersonB {
          * Si no queremos usar ningún método podemos directamente sobreescribir
          * Su lógica.
          */
-        PersonA.super.habla();
-        // PersonaB.super.habla();
+        PersonA.super.talk();
+        // PersonB.super.talk();
     }
 
     public static void main (String[] args) {
         DefaultMethod app = new DefaultMethod();
 
-        app.camina();
-        app.habla();
-        app.come();
-        app.canta();
-        app.duerme();
+        app.walk();
+        app.talk();
+        app.eat();
+        app.sing();
+        app.sleep();
     }
 }

@@ -2,13 +2,13 @@ package com.fjcorona.java8.DefaultMethod;
 
 public interface PersonB {
 
-    public void duerme();
+    public void sleep();
 
-    default public void habla() {
+    default public void talk() {
         System.out.println("Hola, es la PersonaB quien te habla.");
     }
 
-    default public void come() {
+    default public void eat() {
         System.out.println("La PersonaB está comiendo.");
     }
 }
