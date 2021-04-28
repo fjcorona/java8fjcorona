@@ -6,77 +6,77 @@ import java.util.Locale;
 
 public class Streams {
 
-    private List <String> lista;
-    private List <String> numeros;
+    private List <String> list;
+    private List <String> numbers;
 
     public Streams() {
-        lista = new ArrayList<>();
-        lista.add("JavoCrown");
-        lista.add("Javo");
-        lista.add("Crown");
-        lista.add("Francisco");
-        lista.add("Javier");
-        lista.add("Corona");
-        lista.add("Sánchez");
+        list = new ArrayList<>();
+        list.add("JavoCrown");
+        list.add("Javo");
+        list.add("Crown");
+        list.add("Francisco");
+        list.add("Javier");
+        list.add("Corona");
+        list.add("Sánchez");
 
-        numeros = new ArrayList<>();
-        numeros.add("1");
-        numeros.add("2");
-        numeros.add("3");
-        numeros.add("4");
-        numeros.add("5");
-        numeros.add("6");
+        numbers = new ArrayList<>();
+        numbers.add("1");
+        numbers.add("2");
+        numbers.add("3");
+        numbers.add("4");
+        numbers.add("5");
+        numbers.add("6");
     }
 
-    public void filtrar() {
+    public void filter() {
         // Filtrar los elementos de la lista que empiezan con "J"
-        lista.stream()
+        list.stream()
                 .filter( x -> x.startsWith("J") )
                 .forEach(System.out::println);
     }
 
-    public void ordenar() {
+    public void sort() {
         // Si sorted no recibe un consumer, por default ordena de manera ascendente
-        lista.stream()
+        list.stream()
                 .sorted()
                 .forEach(System.out::println);
 
         // Ordenamos de manera descendente
-        lista.stream()
+        list.stream()
                 .sorted( (x, y) -> y.compareToIgnoreCase(x) )
                 .forEach(System.out::println);
 
     }
 
-    public void transformar() {
+    public void transform() {
         // Convertir a mayúsculas todos los elementos de lista
-        // lista.stream().map(x -> x.toUpperCase()).forEach(System.out::println);
-        lista.stream()
+        // list.stream().map(x -> x.toUpperCase()).forEach(System.out::println);
+        list.stream()
                 .map(String::toUpperCase)
                 .forEach(System.out::println);
 
-        // Convertir los elemntos string de la lista numeros, a formato int y sumarles 1
-        numeros.stream().map(x -> Integer.parseInt(x) + 1).forEach(System.out::println);
+        // Convertir los elemntos string de la lista numbers, a formato int y sumarles 1
+        numbers.stream().map(x -> Integer.parseInt(x) + 1).forEach(System.out::println);
     }
 
-    public void limitar() {
+    public void limit() {
         // Limita el número de elementos según se indique
-        lista.stream().limit(2).forEach(System.out::println);
-        numeros.stream().limit(3).forEach(System.out::println);
+        list.stream().limit(2).forEach(System.out::println);
+        numbers.stream().limit(3).forEach(System.out::println);
     }
 
-    public void contar() {
-        System.out.println("Elementos en lista: " + lista.stream().count());
-        System.out.println("Elementos en numeros: " + numeros.stream().count());
+    public void count() {
+        System.out.println("Elementos en lista: " + list.stream().count());
+        System.out.println("Elementos en numbers: " + numbers.stream().count());
     }
 
     public static void main (String[] args) {
         Streams app = new Streams();
 
-        app.filtrar();
-        app.ordenar();
-        app.transformar();
-        app.limitar();
-        app.contar();
+        app.filter();
+        app.sort();
+        app.transform();
+        app.limit();
+        app.count();
     }
 }
