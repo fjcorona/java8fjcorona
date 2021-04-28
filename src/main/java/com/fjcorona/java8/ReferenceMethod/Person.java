@@ -3,14 +3,14 @@ package com.fjcorona.java8.ReferenceMethod;
 public class Person {
 
     public int id;
-    public String nombre;
+    public String name;
 
     public Person() {
     }
 
-    public Person(int id, String nombre) {
+    public Person(int id, String name) {
         this.id = id;
-        this.nombre = nombre;
+        this.name = name;
     }
 
     public int getId() {
@@ -21,19 +21,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public String toString() {
-        return "Persona{" +
+        return "Person{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
