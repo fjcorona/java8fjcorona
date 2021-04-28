@@ -1,7 +1,6 @@
-package com.fjcorona.java8.MetodoReferencia;
+package com.fjcorona.java8.ReferenceMethod;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class MetodoReferencia {
 

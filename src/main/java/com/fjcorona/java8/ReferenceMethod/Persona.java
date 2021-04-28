@@ -1,4 +1,4 @@
-package com.fjcorona.java8.MetodoReferencia;
+package com.fjcorona.java8.ReferenceMethod;
 
 public class Persona {
 
