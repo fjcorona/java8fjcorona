@@ -11,13 +11,13 @@ public class MapClass {
         map = new HashMap<>();
     }
 
-    public void poblar () {
+    public void fillIn () {
         map.put(1, "JavoCrown");
         map.put(2, "Javo");
         map.put(3, "Crown");
     }
 
-    public void imprimirV7() {
+    public void printV7() {
         /*
         this.map.forEach(new BiConsumer<Integer, String>() {
             @Override
@@ -32,28 +32,28 @@ public class MapClass {
         }
     }
 
-    public void imprimirV8() {
+    public void printV8() {
         this.map.forEach( (k, v) -> System.out.println("Key: " + k + ", Value: " + v) );
     }
 
-    public void recolectar() {
+    public void collect() {
     }
 
-    public void insertarSiAusente() {
+    public void insertIfabsent() {
     }
 
-    public void operarSiPresente() {
+    public void performIfPresent() {
     }
 
-    public void obtenerOrPredeterminado() {
+    public void getOrDefault() {
     }
 
     public static void main (String[] args) {
         MapClass app = new MapClass();
 
-        app.poblar();
-        app.imprimirV7();
-        app.imprimirV8();
+        app.fillIn();
+        app.printV7();
+        app.printV8();
     }
 
 }
