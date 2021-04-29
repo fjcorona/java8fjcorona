@@ -1,4 +1,4 @@
-package com.fjcorona.java8.ParallelStreamsApp;
+package com.fjcorona.java8.ParallelStreams;
 
 import java.util.ArrayList;
 import java.util.List;
