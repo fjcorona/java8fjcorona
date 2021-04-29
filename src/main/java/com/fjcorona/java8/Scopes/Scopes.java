@@ -6,8 +6,8 @@ public class Scopes {
     private double attribute2;
 
     public void testLocalAttributeJ7() {
-        // La variable debe ser definida como final para usarse en la clase anónima
-        // El valor no se puede modificar;
+        // The variable must be defined as final in order to be able to used in an anonymous class.
+        // The value could not be modified.
         final double n3 = 3;
         Operation operation = new Operation() {
             @Override
@@ -20,8 +20,8 @@ public class Scopes {
     }
 
     public void testLocalVariableJ8() {
-        // La variable debe ser definida como final para usarse en la expresión lambda
-        // El valor no se puede modificar;
+        // The variable must be defined as final in order to be able to used in a lambda expression.
+        // The value could not be modified.
         final double z = 3;
         Operation operation = (x, y) -> x+y+z;
         System.out.println(operation.compute(1, 2));
@@ -31,8 +31,8 @@ public class Scopes {
         Operation operation = new Operation() {
             @Override
             public double compute(double n1, double n2) {
-                // Los atributos de clase (estáticos o no)
-                // Pueden ser usados y modificados dentro de la clase anónima
+                // Wether they are static or not.
+                // The class attributes could be used and modified inside an anonymous class.
                 attribute1 = n1 + n2;
                 attribute2 = attribute1;
                 return attribute2;
@@ -44,8 +44,8 @@ public class Scopes {
 
     public void testAttributesStaticVariablesJ8() {
         Operation operation = (x, y) -> {
-            // Los atributos de clase (estáticos o no)
-            // Pueden ser usados y modificados dentro de la expresión lambda
+            // Wether they are static or not.
+            // The class attributes could be used and modified inside a lambda expression.
             attribute1 = x + y;
             attribute2 = attribute1;
             return attribute2;
