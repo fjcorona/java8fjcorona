@@ -4,10 +4,10 @@ public interface PersonA {
     public void walk();
 
     default public void talk () {
-        System.out.println("Hola, es la PersonaA quien te habla.");
+        System.out.println("Hi, PersonA is talking to you.");
     }
 
     default public void sing () {
-        System.out.println("Soy PersonaA y te canto con todo el corazón.");
+        System.out.println("PersonA is singing to you.");
     }
 }

@@ -5,10 +5,10 @@ public interface PersonB {
     public void sleep();
 
     default public void talk() {
-        System.out.println("Hola, es la PersonaB quien te habla.");
+        System.out.println("Hi, PersonB is talking to you.");
     }
 
     default public void eat() {
-        System.out.println("La PersonaB está comiendo.");
+        System.out.println("PersonB is eating now.");
     }
 }
