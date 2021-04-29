@@ -29,19 +29,19 @@ public class Streams {
     }
 
     public void filter() {
-        // Filtrar los elementos de la lista que empiezan con "J"
+        // Filter those list elements which first letter is "J"
         list.stream()
                 .filter( x -> x.startsWith("J") )
                 .forEach(System.out::println);
     }
 
     public void sort() {
-        // Si sorted no recibe un consumer, por default ordena de manera ascendente
+        // If not consumer is gotten by "sorted", it sorts ascending by default.
         list.stream()
                 .sorted()
                 .forEach(System.out::println);
 
-        // Ordenamos de manera descendente
+        // Descending sort.
         list.stream()
                 .sorted( (x, y) -> y.compareToIgnoreCase(x) )
                 .forEach(System.out::println);
@@ -49,25 +49,25 @@ public class Streams {
     }
 
     public void transform() {
-        // Convertir a mayúsculas todos los elementos de lista
+        // Change to upper case all list elements.
         // list.stream().map(x -> x.toUpperCase()).forEach(System.out::println);
         list.stream()
                 .map(String::toUpperCase)
                 .forEach(System.out::println);
 
-        // Convertir los elemntos string de la lista numbers, a formato int y sumarles 1
+        // Change into integer, all string elements from "numbers" list and add 1 to each one.
         numbers.stream().map(x -> Integer.parseInt(x) + 1).forEach(System.out::println);
     }
 
     public void limit() {
-        // Limita el número de elementos según se indique
+        // Limit the quantity of elements as the parameter indicates.
         list.stream().limit(2).forEach(System.out::println);
         numbers.stream().limit(3).forEach(System.out::println);
     }
 
     public void count() {
-        System.out.println("Elementos en lista: " + list.stream().count());
-        System.out.println("Elementos en numbers: " + numbers.stream().count());
+        System.out.println("Elements in list: " + list.stream().count());
+        System.out.println("Elements in numbers: " + numbers.stream().count());
     }
 
     public static void main (String[] args) {
