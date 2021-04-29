@@ -8,11 +8,11 @@ public class Optionals {
         // NullPointerException will be thrown if value = null
         // System.out.println(value.toLowerCase().contains("javo"));
 
-        Optional<String> op = Optional.empty();
+        Optional<String> optional = Optional.empty();
         // Since we have an empty optional, the method will thrown an exception
         // So we need to handle it wiath a try-catch
         try {
-            op.get();
+            optional.get();
         } catch (Exception e) {
             System.out.println("No such value");
         }
@@ -20,33 +20,33 @@ public class Optionals {
 
     public void orElse(String value) {
         // If value = null, it returns an exception
-        // Optional<String> op = Optional.of(value);
-        // System.out.println(op.get());
+        // Optional<String> optional = Optional.of(value);
+        // System.out.println(optional.get());
 
         // We must indicate that the value could be nullable
-        // Optional<String> op = Optional.ofNullable(value);
-        // System.out.println(op.get());
+        // Optional<String> optional = Optional.ofNullable(value);
+        // System.out.println(optional.get());
 
         // Indicating "nullable" it's not enough
         // We need to indicate a default value besides.
-        Optional<String> op = Optional.ofNullable(value);
-        System.out.println(op.orElse("No such element"));
+        Optional<String> optional = Optional.ofNullable(value);
+        System.out.println(optional.orElse("No such element"));
     }
 
     public void orElseThrow(String value) {
         // The performance is very similar to the orElseThrow one
         // But we indicate an exception instead a default value.
-        Optional<String> op = Optional.ofNullable(value);
-        String myReturn = op.orElseThrow(NullPointerException::new);
+        Optional<String> optional = Optional.ofNullable(value);
+        String myReturn = optional.orElseThrow(NullPointerException::new);
         System.out.println(myReturn);
     }
 
     public void isPresent(String value) {
         // isPresent just indicates if value has been initialized.
-        // Optional<String> op = Optional.of(value);
+        // Optional<String> optional = Optional.of(value);
         // In order to be able to get "null" values, It must be nullable.
-        Optional<String> op = Optional.ofNullable(value);
-        System.out.println(op.isPresent());
+        Optional<String> optional = Optional.ofNullable(value);
+        System.out.println(optional.isPresent());
     }
 
     public static void main (String[] args) {
