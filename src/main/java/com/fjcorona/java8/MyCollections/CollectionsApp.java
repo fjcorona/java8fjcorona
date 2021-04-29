@@ -2,7 +2,7 @@ package com.fjcorona.java8.MyCollections;
 
 import java.util.*;
 
-public class MyCollections {
+public class CollectionsApp {
 
     private List<String> list;
 
@@ -98,7 +98,7 @@ public class MyCollections {
     }
 
     public static void main (String[] args) {
-        MyCollections app = new MyCollections();
+        CollectionsApp app = new CollectionsApp();
 
         app.fillUpList();
         app.useForEach();

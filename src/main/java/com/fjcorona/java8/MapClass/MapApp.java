@@ -1,13 +1,12 @@
 package com.fjcorona.java8.MapClass;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.function.BiConsumer;
 
-public class MapClass {
+public class MapApp {
 
     private Map<Integer, String> map;
 
-    public MapClass() {
+    public MapApp() {
         map = new HashMap<>();
     }
 
@@ -49,7 +48,7 @@ public class MapClass {
     }
 
     public static void main (String[] args) {
-        MapClass app = new MapClass();
+        MapApp app = new MapApp();
 
         app.fillIn();
         app.printV7();

@@ -2,14 +2,13 @@ package com.fjcorona.java8.Streams;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
-public class Streams {
+public class StreamsApp {
 
     private List <String> list;
     private List <String> numbers;
 
-    public Streams() {
+    public StreamsApp() {
         list = new ArrayList<>();
         list.add("JavoCrown");
         list.add("Javo");
@@ -71,7 +70,7 @@ public class Streams {
     }
 
     public static void main (String[] args) {
-        Streams app = new Streams();
+        StreamsApp app = new StreamsApp();
 
         app.filter();
         app.sort();

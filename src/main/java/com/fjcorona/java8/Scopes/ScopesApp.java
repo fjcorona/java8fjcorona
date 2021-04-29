@@ -1,6 +1,6 @@
 package com.fjcorona.java8.Scopes;
 
-public class Scopes {
+public class ScopesApp {
 
     private static double attribute1;
     private double attribute2;
@@ -55,11 +55,11 @@ public class Scopes {
     }
 
     public static void main(String[] args) {
-        Scopes scopes = new Scopes();
-        // scopes.testLocalVariableJ7();
-        scopes.testLocalVariableJ8();
-        // scopes.testAttributesStaticVariablesJ7();
-        scopes.testAttributesStaticVariablesJ8();
+        ScopesApp app = new ScopesApp();
+        // app.testLocalVariableJ7();
+        app.testLocalVariableJ8();
+        // app.testAttributesStaticVariablesJ7();
+        app.testAttributesStaticVariablesJ8();
     }
 
 }

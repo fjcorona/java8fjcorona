@@ -2,7 +2,7 @@ package com.fjcorona.java8.Optionals;
 
 import java.util.Optional;
 
-public class Optionals {
+public class OptionalsApp {
 
     public void test(String value) {
         // NullPointerException will be thrown if value = null
@@ -50,7 +50,7 @@ public class Optionals {
     }
 
     public static void main (String[] args) {
-        Optionals app = new Optionals();
+        OptionalsApp app = new OptionalsApp();
 
         app.test("JavoCrown");
         app.test("JavierCorona");

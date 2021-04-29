@@ -2,14 +2,14 @@ package com.fjcorona.java8.ReferenceMethod;
 
 import java.util.Arrays;
 
-public class ReferenceMethod {
+public class ReferenceMethodApp {
 
     public static void referenceStaticMethod () {
         System.out.println("Reference to static method");
     }
 
     public void perform() {
-        Operation opp = ReferenceMethod::referenceStaticMethod;
+        Operation opp = ReferenceMethodApp::referenceStaticMethod;
         opp.salute();
     }
 
@@ -63,7 +63,7 @@ public class ReferenceMethod {
     }
 
     public static void main (String[] args) {
-        ReferenceMethod app = new ReferenceMethod();
+        ReferenceMethodApp app = new ReferenceMethodApp();
         app.perform();
         app.referenceMethodInstanceArbitraryObject();
 

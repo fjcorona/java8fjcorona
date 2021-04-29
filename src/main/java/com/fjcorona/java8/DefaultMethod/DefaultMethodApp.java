@@ -1,6 +1,6 @@
 package com.fjcorona.java8.DefaultMethod;
 
-public class DefaultMethod implements PersonA, PersonB {
+public class DefaultMethodApp implements PersonA, PersonB {
 
     @Override
     public void walk() {
@@ -26,7 +26,7 @@ public class DefaultMethod implements PersonA, PersonB {
     }
 
     public static void main (String[] args) {
-        DefaultMethod app = new DefaultMethod();
+        DefaultMethodApp app = new DefaultMethodApp();
 
         app.walk();
         app.talk();
