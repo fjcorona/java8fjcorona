@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ReferenceMethod {
 
     public static void referenceStaticMethod () {
-        System.out.println("Referencia a método estático");
+        System.out.println("Reference to static method");
     }
 
     public void perform() {
@@ -16,7 +16,7 @@ public class ReferenceMethod {
     public void referenceMethodInstanceArbitraryObject() {
         String[] names = {"JavoCrown", "Javo", "Crown"};
 
-        // Con clase anónima
+        // With anonymous class
 
         /*
         Arrays.sort(names, new Comparator<String>() {
@@ -27,22 +27,22 @@ public class ReferenceMethod {
         });
         */
 
-        // Con expresión lambda
+        // With lambda expression
         // Arrays.sort(names, (o1, o2) -> o1.compareToIgnoreCase(o2));
 
-        // Con referencia a método
+        // With reference to method
         Arrays.sort(names, String::compareToIgnoreCase);
 
         System.out.println(Arrays.toString(names));
     }
 
     public void referenceMethodInstanceSpecificObject() {
-        System.out.println("Referencia a método de una instancia particular.");
+        System.out.println("Reference to a method from a particular instance.");
     }
 
     public void referenceConstructor() {
 
-        // Con clase anónima
+        // With anonymous class
 
         /*
         IPersona iper = new IPerson() {
@@ -53,10 +53,10 @@ public class ReferenceMethod {
         };
         */
 
-        // Con expresión lambda
+        // With lambda expression
         // IPerson iper = (x, y) -> new Person(x, y);
 
-        // Con referencia al método constructor
+        // With reference to a constructor method
         IPerson iper = Person::new;
 
         System.out.println(iper.create(1, "Javo").toString());
@@ -67,7 +67,7 @@ public class ReferenceMethod {
         app.perform();
         app.referenceMethodInstanceArbitraryObject();
 
-        // Referenciar a metodo de la i9nstancia particular app
+        // Reference the method from the particular "app" instance
         Operation opp = app::referenceMethodInstanceSpecificObject;
         opp.salute();
 
