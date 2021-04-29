@@ -1,4 +1,4 @@
-package com.fjcorona.java8.MyCollections;
+package com.fjcorona.java8.Collections;
 
 import java.util.*;
 

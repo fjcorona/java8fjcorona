@@ -1,4 +1,4 @@
-package com.fjcorona.java8.MapClass;
+package com.fjcorona.java8.Map;
 import java.util.HashMap;
 import java.util.Map;
 
