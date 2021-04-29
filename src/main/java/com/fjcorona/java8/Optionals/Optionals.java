@@ -5,12 +5,12 @@ import java.util.Optional;
 public class Optionals {
 
     public void test(String value) {
-        // Si el valor es null devuelve un NullPointerException
+        // NullPointerException will be thrown if value = null
         // System.out.println(value.toLowerCase().contains("javo"));
 
         Optional<String> op = Optional.empty();
-        // Al ser un optional vacío el método get arroja una excepción
-        // Por lo cual hay que manejarlo en un bloque try catch
+        // Since we have an empty optional, the method will thrown an exception
+        // So we need to handle it wiath a try-catch
         try {
             op.get();
         } catch (Exception e) {
@@ -19,32 +19,32 @@ public class Optionals {
     }
 
     public void orElse(String value) {
-        // Si el valor es null devuelve un exception
+        // If value = null, it returns an exception
         // Optional<String> op = Optional.of(value);
         // System.out.println(op.get());
 
-        // Hay que indicar que el valor puede ser nulleable
+        // We must indicate that the value could be nullable
         // Optional<String> op = Optional.ofNullable(value);
         // System.out.println(op.get());
 
-        // No sólo basta con indicar nulleable
-        // Además hay que agregar un valor por default
+        // Indicating "nullable" it's not enough
+        // We need to indicate a default value besides.
         Optional<String> op = Optional.ofNullable(value);
         System.out.println(op.orElse("No such element"));
     }
 
     public void orElseThrow(String value) {
-        // Funciona parecido a orElseThrow
-        // Pero en lugar de un valor por defecto retorna una excepción
+        // The performance is very similar to the orElseThrow one
+        // But we indicate an exception instead a default value.
         Optional<String> op = Optional.ofNullable(value);
         String myReturn = op.orElseThrow(NullPointerException::new);
         System.out.println(myReturn);
     }
 
     public void isPresent(String value) {
-        // isPresent sólo indica si el valor ha sido inicializado o no
+        // isPresent just indicates if value has been initialized.
         // Optional<String> op = Optional.of(value);
-        // Debe ser un optional de nulleable para poder ecibir nulos
+        // In order to be able to get "null" values, It must be nullable.
         Optional<String> op = Optional.ofNullable(value);
         System.out.println(op.isPresent());
     }
