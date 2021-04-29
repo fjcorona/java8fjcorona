@@ -15,7 +15,7 @@ public class MyCollections {
     }
 
     public void useForEach() {
-        // Con un ciclo for común y corriente
+        // With a simple for loop
 
         /*
         for (String element : list) {
@@ -23,15 +23,15 @@ public class MyCollections {
         }
         */
 
-        // Con una expresión lambda
+        // With a lambda expression
         // list.forEach( x -> System.out.println(x) );
 
-        // Con referencia a método
+        // With a reference to method
         list.forEach(System.out::println);
     }
 
     public void usaRemoveIf() {
-        // Con un ciclo for. Retorna una excepción
+        // If a for loop is used, it returns an exception
         /*
         for (String element : list) {
             if (element.equalsIgnoreCase("Crown")) {
@@ -40,7 +40,7 @@ public class MyCollections {
         }
         */
 
-        // Con un iterator
+        // With an iterator
         /*
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
@@ -50,17 +50,17 @@ public class MyCollections {
         }
         */
 
-        // Con una expresión lambda
+        // With a lambda expression
         list.removeIf(x -> x.equalsIgnoreCase("Crown"));
     }
 
     public void useSort() {
 
 
-        // -------- CON ḾETODO SORT DE COLLECTIONS
+        // -------- WITH "SORT" METHOD FROM COLLECTIONS
 
 
-        // Clase anónima
+        // Anonymous class
         /*
         Collections.sort(list, new Comparator<String>() {
             @Override
@@ -70,17 +70,17 @@ public class MyCollections {
         });
         */
 
-        // Expresión lambda
+        // Lambda expression
         // Collections.sort(list, (x, y) -> x.compareToIgnoreCase(y));
 
-        // Referencia a método
+        // Reference to method
         // Collections.sort(list, String::compareToIgnoreCase);
 
 
-        // -------- CON ḾETODO SORT PROPIO DE LA LISTA
+        // -------- WITH "SORT" METHOD INHERENT TO THE LIST
 
 
-        // Clase anónima
+        // Anonymous class
         /*
         list.sort(new Comparator<String>() {
             @Override
@@ -90,10 +90,10 @@ public class MyCollections {
         });
         */
 
-        // Expresión lambda
+        // Lambda expression
         // list.sort( (x, y) -> x.compareToIgnoreCase(y) );
 
-        // Referencia a método
+        // Reference to method
         list.sort(String::compareToIgnoreCase);
     }
 
